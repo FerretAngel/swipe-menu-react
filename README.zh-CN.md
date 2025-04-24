@@ -15,7 +15,7 @@ pnpm add swipe-menu-react
 ```
 
 
-### ⚠在tailwind.config.ts中
+### ⚠在tailwind.config.ts中 (v3)
 ```js
 import type { Config } from "tailwindcss";
 export default {
@@ -25,6 +25,11 @@ export default {
   ],
   ...
 } satisfies Config;
+```
+### ⚠在index.css中 (v4)
+```js
+@import "tailwindcss";
+@source '../node_modules/swipe-menu-react/dist/**/*.{js,ts,jsx,tsx}'; // ⚠添加这一行
 ```
 
 ## 特性
