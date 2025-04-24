@@ -49,14 +49,14 @@
     "menu",
     "tailwindcss"
   ],
-  "author": "",
+  "author": "FerretAngel",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/swipe-menu-react"
+    "url": "https://github.com/FerretAngel/swipe-menu-react"
   },
-  "homepage": "https://github.com/yourusername/swipe-menu-react#readme",
+  "homepage": "https://github.com/FerretAngel/swipe-menu-react#readme",
   "bugs": {
-    "url": "https://github.com/yourusername/swipe-menu-react/issues"
+    "url": "https://github.com/FerretAngel/swipe-menu-react/issues"
   }
 }
