@@ -3,9 +3,9 @@
   "private": false,
   "version": "0.1.0",
   "type": "module",
-  "main": "index.umd.js",
-  "module": "index.es.js",
-  "types": "index.d.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -14,7 +14,7 @@
     "build": "tsc -p tsconfig.types.json && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "@iconify/react": "^5.2.1",
