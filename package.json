@@ -3,9 +3,9 @@
   "private": false,
   "version": "0.1.0",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.umd.js",
+  "module": "index.es.js",
+  "types": "index.d.ts",
   "files": [
     "dist"
   ],
