@@ -1,29 +1,24 @@
 {
-  "name": "swipe-menu-react",
-  "private": false,
-  "version": "0.1.2",
+  "name": "swipe-menu-project",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.types.json && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "prepublishOnly": "pnpm build"
+    "preview": "vite preview"
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  "dependencies": {
+    "@iconify/react": "^5.2.1",
+    "@tailwindcss/vite": "^4.1.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "swipe-menu-react": "^0.1.2",
+    "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
-    "@tailwindcss/vite": "^4.1.4",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
@@ -31,32 +26,8 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
-    "vite": "^6.3.1",
-    "@iconify/react": "^5.2.1",
-    "@rollup/plugin-typescript": "^12.1.2",
-    "tailwindcss": "^4.1.4",
-    "tslib": "^2.8.1",
-    "vite-plugin-dts": "^4.5.3",
-    "swipe-menu-react": "file:./"
-  },
-  "keywords": [
-    "react",
-    "swipe",
-    "menu",
-    "tailwindcss"
-  ],
-  "author": "FerretAngel",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/FerretAngel/swipe-menu-react"
-  },
-  "homepage": "https://github.com/FerretAngel/swipe-menu-react#readme",
-  "bugs": {
-    "url": "https://github.com/FerretAngel/swipe-menu-react/issues"
+    "vite": "^6.3.1"
   }
 }

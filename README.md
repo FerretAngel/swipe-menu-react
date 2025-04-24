@@ -1,79 +1,54 @@
-# SwipeMenu React
+# React + TypeScript + Vite
 
-[中文文档](./README.zh-CN.md)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-A simple React swipe menu component that supports touch screens and mouse operations.
+Currently, two official plugins are available:
 
-## Installation
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-```bash
-npm install swipe-menu-react
-# or
-yarn add swipe-menu-react
-# or
-pnpm add swipe-menu-react
-```
-### ⚠ In tailwind.config.ts
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
 ```js
-import type { Config } from "tailwindcss";
-export default {
-  content: [
-    ...
-    "./node_modules/swipe-menu-react/dist/**/*.{js,ts,jsx,tsx}", // ⚠ Add this line
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
   ],
-  ...
-} satisfies Config;
-```
-## Features
-
-- Display menu by swiping on touch devices
-- Display menu by mouse hover on PC devices
-- Customizable styles
-- Built-in Tailwind CSS, no additional configuration needed
-
-## Example Usage
-
-```tsx
-import { SwipeMenu } from 'swipe-menu-react';
-import { Icon } from "@iconify/react";
-
-function App() {
-  return (
-    <SwipeMenu
-      className="w-md gap-1 p-1"
-      asideClassName="flex items-center gap-1"
-      maxWidth="6rem"
-      aside={
-        <>
-          <button className="text-blue-500 text-2xl">
-            <Icon icon="lucide:edit" />
-          </button>
-          <button className="text-red-500 text-2xl">
-            <Icon icon="lucide:trash-2" />
-          </button>
-        </>
-      }>
-      <button className="truncate w-full h-full text-start">
-        A Simple Description to test the swipe menu
-      </button>
-    </SwipeMenu>
-  );
-}
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
 ```
 
-## API
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-### SwipeMenu Component
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-| Property | Type | Default | Description |
-|------|------|-------|------|
-| children | React.ReactNode | - | Main content |
-| aside | React.ReactNode | - | Side content shown when swiped |
-| maxWidth | string | '18rem' | Maximum width of side content |
-| className | string | - | Additional class name for the root element |
-| mainClassName | string | - | Additional class name for the main content area |
-| asideClassName | string | - | Additional class name for the side content area |
-
-## License
-
-MIT
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```

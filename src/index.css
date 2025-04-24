@@ -1,5 +1,2 @@
 @import "tailwindcss";
-
-button {
-  @apply bg-neutral-100 rounded-md p-2 cursor-pointer hover:bg-gray-200 active:bg-gray-200 ;
-}
+@source '../../node_modules/swipe-menu-react/dist/**/*.{js,ts,jsx,tsx}';
