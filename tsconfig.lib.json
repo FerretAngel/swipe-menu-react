@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.lib.tsbuildinfo",
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist",
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler"
+  },
+  "include": ["src/lib"]
+}
