@@ -3,6 +3,7 @@
 [中文文档](./README.zh-CN.md)
 
 A simple React swipe menu component that supports touch screens and mouse operations.
+[Live Demo](https://ferretangel.github.io/swipe-menu-react/)
 
 ## Installation
 

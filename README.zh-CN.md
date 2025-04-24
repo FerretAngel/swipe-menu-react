@@ -2,7 +2,8 @@
 
 [English](./README.md)
 
-一个简单的React侧滑菜单组件，支持触摸屏和鼠标操作。
+一个简单的React侧滑菜单组件，支持移动端侧滑菜单和PC端hover弹出菜单。
+[在线体验](https://ferretangel.github.io/swipe-menu-react/)
 
 ## 安装
 
