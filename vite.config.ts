@@ -1,27 +1,25 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-
+import dts from 'vite-plugin-dts'
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), dts({ rollupTypes: true, include: ['./src/components/SwipeMenu'], tsconfigPath: './tsconfig.app.json' })],
   build: {
     lib: {
-      entry: 'src/lib/index.ts',
-      name: 'SwipeMenuReact',
-      fileName: 'index',
-      formats: ['es']
+      entry: './src/components/SwipeMenu/index.ts',
+      name: "SwipeMenuReact",
+      fileName: format => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ["react", "react-dom"],
       output: {
         globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM'
-        }
-      }
+          react: "react",
+          "react-dom": "react-dom",
+        },
+      },
+
     },
-    cssCodeSplit: true,
-    sourcemap: true
-  }
+  },
 })

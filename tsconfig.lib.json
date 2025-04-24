@@ -10,5 +10,5 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "bundler"
   },
-  "include": ["src/lib"]
+  "include": ["src/components"]
 }
