@@ -4,7 +4,7 @@ function App() {
   return (
     <main className="w-[100dvw] h-[100dvh] grid place-items-center">
       <SwipeMenu
-        className="w-md gap-1 p-1"
+        className="w-md max-w-full gap-1 p-1"
         asideClassName="flex items-center gap-1"
         maxWidth="6rem"
         aside={
