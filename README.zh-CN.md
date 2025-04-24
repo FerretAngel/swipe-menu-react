@@ -14,6 +14,19 @@ yarn add swipe-menu-react
 pnpm add swipe-menu-react
 ```
 
+
+### ⚠在tailwind.config.ts中
+```js
+import type { Config } from "tailwindcss";
+export default {
+  content: [
+    ...
+    "./node_modules/swipe-menu-react/dist/**/*.{js,ts,jsx,tsx}", // ⚠添加这一行
+  ],
+  ...
+} satisfies Config;
+```
+
 ## 特性
 
 - 触屏设备上通过滑动显示菜单

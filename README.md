@@ -13,7 +13,17 @@ yarn add swipe-menu-react
 # or
 pnpm add swipe-menu-react
 ```
-
+### ⚠ In tailwind.config.ts
+```js
+import type { Config } from "tailwindcss";
+export default {
+  content: [
+    ...
+    "./node_modules/swipe-menu-react/dist/**/*.{js,ts,jsx,tsx}", // ⚠ Add this line
+  ],
+  ...
+} satisfies Config;
+```
 ## Features
 
 - Display menu by swiping on touch devices

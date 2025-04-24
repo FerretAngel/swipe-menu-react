@@ -1,4 +1,4 @@
-import SwipeMenu from "../dist";
+import SwipeMenu from "swipe-menu-react";
 import { Icon } from "@iconify/react";
 function App() {
   return (
